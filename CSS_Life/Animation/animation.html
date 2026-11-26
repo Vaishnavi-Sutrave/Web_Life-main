@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    height: 100vh;
+}
+.mainbox{
+    height: 600px;
+    width: 600px;
+    border: 2px solid;
+    
+
+}
+.childbox{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid;
+    animation-name: catwoman;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* animation-delay: 3s; */
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes catwoman{
+    /* from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(500px,0px);
+    } */
+    
+    0%{
+        transform: translate(0px,0px);
+        
+    }
+    25%{
+        transform: translate(500px,0px);
+        background-color: green;
+
+    }
+    50%{
+        transform: translate(500px,500px);
+        background-color: yellow;
+
+    }
+    75%{
+        transform: translate(0px,500px);
+        background-color:blue;
+    }
+
+
+}
+</style>
+</head>
+<body>
+     <div class="mainbox">
+    <div class="childbox">
+        <h1>Box-1</h1>
+
+    </div>
+   </div>
+</body>
+</html>

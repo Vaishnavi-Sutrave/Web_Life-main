@@ -1,0 +1,287 @@
+ #box
+ {
+    height: 1500px;
+    width: 100px;
+    border: solid;
+
+    background-color:pink;
+    /* It will specify the background color of ann element .
+    Values: white(d), any color*/
+
+    background-image: url("https://media.istockphoto.com/id/610041376/photo/beautiful-sunrise-over-the-sea.jpg?s=612x612&w=0&k=20&c=R3Tcc6HKc1ixPrBc7qXvXFCicm8jLMMlT99MfmchLNA=");
+
+    background-repeat:repeat;
+    /*It will specify the repeating pattern of a background image.
+    Values:repeat(d), repeat-x,repeat-y,no-repeat*/
+
+
+    background-position-x: right;
+    /*It will specify the position of background image w.r.t x-axis
+    Values:left(d), center, right */
+
+    background-position-y: center;
+     /*It will specify the position of background image w.r.t x-axis
+    Values:topt(d), center, bottom */
+
+    background-position: left top;
+    background-position: left center;
+    background-position: center bottom;
+    background-position: right top;
+
+    /*It is a short-hand property of background-position-x and background-position-y */
+
+    background-size: cover;
+    background-size: contain;
+    background-size: 300px;
+    background-size: 50%;
+
+    /* It will specify the sixe of bachground-image
+    Values:auto(d),contain,cover,anynumb(px,%)*/ 
+
+ }
+
+ body{
+    background: url("https://static.vecteezy.com/system/resources/previews/023/115/063/non_2x/a-grieving-family-woman-embracing-her-daughter-painted-in-watercolor-on-textured-paper-digital-watercolor-painting-photo.jpg");
+
+    background-size: cover;
+
+    background-attachment: fixed;  
+
+
+
+ }
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One8 - Application Name</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #f8f9fa; color: #1a1a1a; display: flex; }
+    
+    /* Left Sidebar - like in your screenshot */
+    .sidebar {
+        width: 220px;
+        background: white;
+        height: 100vh;
+        padding: 20px;
+        border-right: 1px solid #e5e5e5;
+        position: fixed;
+    }
+    .sidebar p { font-size: 14px; color: #888; margin: 12px 0; cursor: pointer; }
+    .sidebar p:hover { color: #000; }
+
+    /* Main Content */
+    .main {
+        margin-left: 220px;
+        width: 100%;
+        padding: 40px 60px;
+        background: white;
+        min-height: 100vh;
+    }
+    .top-line { height: 4px; background: #00b67a; width: 100%; margin-bottom: 30px; }
+    .small-green { color: #00b67a; font-weight: 700; font-size: 18px; }
+    .small-grey { color: #666; font-size: 14px; margin-top: 4px; }
+    
+    .app-title { font-size: 64px; font-weight: 800; color: #2c3e6b; margin: 30px 0 5px 0; }
+    .date { color: #666; font-size: 18px; font-weight: 600; }
+
+    .section-title { font-size: 20px; font-weight: 800; color: #2c3e6b; margin-top: 50px; letter-spacing: 1px; }
+    .section-text { color: #666; font-size: 16px; margin-top: 15px; line-height: 1.6; }
+
+    /* For One8 theme */
+    .one8-badge { 
+        background: #111; color: #d4af37; 
+        padding: 6px 14px; border-radius: 20px; 
+        font-size: 12px; font-weight: bold; display: inline-block; 
+        margin-bottom: 10px; letter-spacing: 1px;
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <p style="font-size: 24px; color: #000;">+</p>
+    <p><b>One8</b></p>
+    <p>OVERVIEW</p>
+    <p>FEATURES</p>
+    <p>TECH STACK</p>
+    <p>UI / MOCKUP</p>
+    <p>FLOW</p>
+    <p>LINKS</p>
+</div>
+
+<div class="main">
+    <div class="top-line"></div>
+    
+    <div class="one8-badge">ONE8 PROJECT</div>
+    <div class="small-green">Your Name - Replace Here</div>
+    <div class="small-grey">College ID: Your ID</div>
+
+    <h1 class="app-title">One8</h1>
+    <div class="date">October 31, 2026</div>
+
+    <div class="section-title">OVERVIEW</div>
+    <div class="section-text">
+        One8 is a modern web platform inspired by performance, style and innovation. 
+        Explain here how you understood the problem statement and your approach to the solution. 
+        For example: A platform to showcase One8 products, collections and brand story.
+    </div>
+
+    <div class="section-title">FEATURES</div>
+    <div class="section-text">
+        - Premium product showcase<br>
+        - Clean and minimal UI<br>
+        - Responsive for mobile and desktop<br>
+        - Fast loading and easy navigation
+    </div>
+
+    <div class="section-title">TECH STACK</div>
+    <div class="section-text">
+        HTML5, CSS3, JavaScript
+    </div>
+</div>
+
+</body>
+</html>
+
+
+---------
+/* One8 AI - Premium CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #080808;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  background: #080808;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: #d4af37;
+}
+
+.nav-links a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.btn-gold {
+  background: #d4af37;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  background: #f0c94a;
+  transform: scale(1.05);
+}
+
+/* HERO */
+.hero {
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.badge {
+  border: 1px solid #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #d4af37;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-size: 72px;
+  font-weight: 900;
+  margin: 25px 0;
+  line-height: 1;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero p {
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 35px auto;
+  font-size: 18px;
+}
+
+/* CARDS - Your Screenshot Sections */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #111111;
+  border: 1px solid #222;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #d4af37;
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #d4af37;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #888;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 40px; }
+  .container { grid-template-columns: 1fr; }
+  .navbar { padding: 15px 20px; }
+}

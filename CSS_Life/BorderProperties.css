@@ -1,0 +1,54 @@
+#box
+{
+    height: 400px;
+    width: 400px;
+    border-width: 2px;
+    /*It will specify the width of the vorder.
+    Values:any number*/
+
+    border-style: solid;
+    /*It will specify the style of the border.
+    Values:none(d),solid,dotted,dashed,double,groove,ridge*/
+
+    border-color: green;
+    /* It will specify the colorof the border*/
+
+    border: 5px solid blue;
+
+    border-top: 10px dotted crimson;
+    border-bottom: 5px dashed blueviolet;
+    border-right: 2px double lightsalmon;
+    border-left: 8px groove green;
+
+
+}
+
+#box2
+{
+    height: 400px;
+    width: 400px;
+    border: 5px solid purple;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 2px;
+
+/*Set 4 values*/
+    border-radius: 10px 20px 30px 40px;
+/*Set 3 values*/
+    border-radius: 10px 20px 30px;
+/*set 2 values */
+    border-radius: 10px 20px;
+
+/*set 1 value */ 
+    border-radius: 10px;
+
+
+}
+
+table
+{
+    border-spacing: 50px;
+    border-collapse: collapse;
+}

@@ -1,0 +1,147 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.MainNavBar {
+    width: 100vw;
+    height: 70px;
+    background-color: whitesmoke;
+    display: flex;
+    border-bottom: 1px solid; 
+    position: relative;
+    z-index: 10;
+
+}
+
+.leftNav {
+    width: 50%;
+    height: 70px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+
+
+}
+
+
+.rightNav {
+    width: 50%;
+    height: 70px;
+    /* background-color: red; */
+    display: flex;
+  
+  
+}
+
+.rightNav ul {
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    gap: 20px;
+    list-style: none;
+    
+    
+
+}
+
+.rightNav ul li a {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+   
+}
+
+.rightNav ul button {
+    padding: 10px 18px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+
+}
+
+
+
+main {
+    width: 100vw;
+    height: 80vh;
+    border-color: aqua;
+    border-bottom: 1px solid;
+    display: flex;
+}
+
+.leftMain {
+    width: 60%;
+    height: 100%;
+    /* background-color: paleturquoise; */
+    display: flex;
+    align-items: end;
+    padding-top: 100px;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.leftMain h1 {
+    font-weight: 500;
+    font-size: 7.5rem;
+    line-height: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right: 80px;
+}
+.leftMain p{
+    padding-left: 90px;
+    font-size: 20px;
+    align-self: flex-start;
+}
+.leftMain button{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding:10px 20px;
+    margin-left:80px ;
+    font-size: 25px;
+    align-self: flex-start;
+
+}
+
+.rightMain {
+    width: 40%;
+    height: 100%;
+    /* background-color: palegreen; */
+   
+}
+
+.rightMain img{
+    position: absolute;
+    top: 0px;
+    height: 650px;  
+    width: 450px;
+    right: -30px;
+  
+}
+
+footer{
+    width: 100vw;
+    /* background-color: red; */
+    height: cal(100vh-70px-80vh);
+ 
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+footer ul li{
+   list-style: none;
+   height: 70px;
+
+}
+ 
