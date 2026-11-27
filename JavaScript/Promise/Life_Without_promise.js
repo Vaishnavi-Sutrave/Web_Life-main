@@ -15,6 +15,14 @@ function preparefood(callback)
         
 },4000);
 }
+function payment(callback)
+{
+    setTimeout(()=>{
+        console.log("Payment Succesfull");
+        callback()
+        
+    },2000)
+}
 function takeAway(callback)
 {
     setTimeout(()=>{
@@ -25,8 +33,12 @@ function takeAway(callback)
 }
 orderfood(()=>{
     preparefood(()=>{
+        payment(()=>{
+
+       
         takeAway(()=>{
             console.log("Enjoy ur food");
+             })
             
         })
 

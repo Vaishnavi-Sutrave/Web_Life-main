@@ -1,0 +1,19 @@
+// promise--1. resolve--once--when promise is succesfull
+            //2.reject--when rejected
+let myPromise=new Promise((resolve,reject)=>{
+    console.log("i am inside executor function");
+    resolve("data is received")
+    reject("data is not received")//cant happen
+    
+})
+
+//traditional way to handle promise-
+// //-1.then()--used to handle resolve, 2.catch()--used to handle reject
+
+myPromise.then((data)=>{
+    console.log(data);
+    }).catch((err)=>{
+        console.log(err);
+        
+    })
+
