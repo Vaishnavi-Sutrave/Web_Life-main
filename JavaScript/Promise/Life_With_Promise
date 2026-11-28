@@ -1,19 +1,192 @@
 // promise--1. resolve--once--when promise is succesfull
             //2.reject--when rejected
-let myPromise=new Promise((resolve,reject)=>{
-    console.log("i am inside executor function");
-    resolve("data is received")
-    reject("data is not received")//cant happen
+// let myPromise=new Promise((resolve,reject)=>{
+//     console.log("i am inside executor function");
+//     resolve("data is received")
+//     reject("data is not received")//cant happen
     
-})
+// })
 
-//traditional way to handle promise-
-// //-1.then()--used to handle resolve, 2.catch()--used to handle reject
-
-myPromise.then((data)=>{
-    console.log(data);
-    }).catch((err)=>{
-        console.log(err);
+// //1.traditional way to handle promise-
+// // //-i.then()--used to handle resolve, ii.catch()--used to handle reject
+// // myPromise.then((data)=>{
+// //     console.log(data);
+// //     }).catch((err)=>{
+// //         console.log(err);
         
-    })
+// //     })
+
+
+
+// //2.Modern way(async and await)
+// //to handle success and failure state we use try and catch()
+// async function HandlingMyownPromise()
+// {
+//     try
+//     {
+//        let result=await myPromise
+//        console.log(result);  
+//     }
+//     catch(err)
+//     {
+//         console.log(err);
+        
+//     }
+    
+// }
+// HandlingMyownPromise()
+
+//create a promise of boolean data 
+
+// let thumbin=new Promise((resolve,reject)=>{
+//      console.log("Detect the fingerprint");
+//      let boolean=false
+//     if(boolean)
+//     {
+//        resolve("FingerPrint detected") 
+//     }
+
+//    else{
+//         reject("FingerPrint not detected")
+//    }
+//     //cant happen
+    
+// })
+// async function HandlingPromise()
+// {
+//     try{
+//         let result=await thumbin
+//         console.log(result);
+        
+//     }
+//     catch(err)
+//     {
+//         console.log(err);
+        
+//     }
+// }
+// HandlingPromise()
+
+
+
+//0rdering food WITH THEN AND RESOLVE
+// function orderfood()
+// {
+//     return new Promise((resolve, reject) => {
+//          setTimeout(()=>{
+//         console.log("order is placed");
+//         resolve()
+        
+//     },2000)
+   
+        
+// });
+// }
+// function preparefood()
+// {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         console.log("food is prepared");
+//         resolve()
+        
+// },4000)
+// });
+// }
+// function payment()
+// {
+//      return new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         console.log("Payment Succesfull");
+//         resolve()
+        
+        
+//     },2000)
+// });
+// }
+// function takeAway()
+// {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         console.log("Your order is ready to take");
+//         resolve()
+        
+        
+// },3000)
+// });
+// }
+// orderfood().then(()=>{
+//     return preparefood()
+// }).then(()=>{
+//     return payment()
+
+// }).then(()=>{
+//     return takeAway()
+    
+// }).then(()=>{
+//     console.log("enjoy ur meal");
+    
+// }
+// )
+
+//0RDERING A FOOD USING ASYNC AND AWAIT
+function orderfood()
+{
+    return new Promise((resolve, reject) => {
+         setTimeout(()=>{
+        console.log("order is placed");
+        resolve()
+        
+    },2000)
+   
+        
+});
+}
+function preparefood()
+{
+    return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        console.log("food is prepared");
+        resolve()
+        
+},4000)
+});
+}
+function payment()
+{
+     return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        console.log("Payment Succesfull");
+        resolve()
+        
+        
+    },2000)
+});
+}
+function takeAway()
+{
+    return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        console.log("Your order is ready to take");
+        resolve()
+        
+        
+},3000)
+});
+}
+async function processOrder() {
+  try {
+    await orderfood();
+    await preparefood();
+    await payment();
+    await takeAway();
+    console.log("enjoy ur meal");
+  } catch (error) {
+    console.error("Order failed:", error);
+  }
+}
+
+processOrder();
+
+
+
 
